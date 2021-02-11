@@ -10,14 +10,18 @@
 
 \maketitle
 \section{Name, Place and Date}
-
+--Name Of Webapp--\\
+Mayaguez, PR\\
+Febrero 10, 2021
 \section{Current Situation, Needs, Ideas and Concept}
+\vspace{10}
 Managers need project management programs to manage their employees tasks and projects and give them a way for them to know what they need to do. Most of these programs have become bloated over time and have overcomplicated tasks that should be pretty straightforward causing the need for managers to take training to be able to use these tools. The project would involved in creating a project management program that cuts the bloat and focuses on making an intuitive and easy to use platform where no training is needed to properly use. This would involve a structure where:
 \begin{enumerate}
 \item Platform for managers: Managers can access a platform to view tasks and projects and delegate them to employees.
 \item Platform for employees: Employees can view tasks assigned to them and add notes alerting the manager of questions and or detailed info about the task.
 \end{enumerate}
 \section{Scope, Span and Synopsis}
+\vspace{10}
 The problem is to understand project management in general: deadlines, task lists, schedules, file sharing, communication, teamwork, and logistics of project management. This is used to build a theory of management systems: leadership, planning, project monitoring, status, standards and, improvement.
 
 The project is to develop and research a Program Management Software. This project is expected to cover:
@@ -29,9 +33,10 @@ The project is to develop and research a Program Management Software. This proje
 \end{enumerate}
 
 \section{Assumptions and Dependencies}
+\vspace{100}
 
 \section{Implicit/Derivative Goals}
-
+\vspace{10}
 For the system to work properly and ensure a good experience with the users it must comply with the following:
 \begin{enumerate}
   \item Changes made will be updated at real time or with no more than a 200 ms delay for 99\% of the cases.
@@ -39,7 +44,36 @@ For the system to work properly and ensure a good experience with the users it m
   \item Even at peak times server load should be lower than 80\%
   \item Response times from interface must be kept lower than 500 ms.
   \item Platform must be available at all times, with the exclusion of programmed downtimes.
-\end{enumerate}}
+\end{enumerate}
+\vspace{10}
+Rough sketch requirements as user stories:
+\begin{quotation}
+As a user, having an organized and productive workflow is very critical and important, because it drastically improves the productivity of the user and the company. When its time to divide the work withing a team or assigning work to your employees having a Workflow management app really helps the process. If someone is stuck in a task, they can show it on the app, so a manager/Leader can send him a message and start helping them. The employee/manager and the team-member/Leader communication improves by having the online message system.
+\end{quotation}
+\begin{quotation}
+    As a user, having an easy-to-use and accessible Workflow Management app can be really helpful. I would like to be able to create and edit workflows as easy as possible, and to be remained about deadlines, messages and updates.
+\end{quotation}
+\vspace{10}
+Domain Requirements:
+\begin{itemize}
+    \item The data base must store end-user accounts, along with their password and personal information needed to create an account.
+    \item The end-user should be able to create, edit, and delete current or new workflows.
+    \item The end-user should be able to edit, update or delete their personal information from the data-base.
+    \item The app should hide the personal information given by creating an account unless the end-user require it.
+    \item The system-to-be needs to keep a list of every user registered so it can quickly identify if the user haves an account or it needs to create one.
+    \item System-to-be must identify the user \“rank\” in order to classify the account as the manager or employee, as a leader or as a teammate.
+    \item System-to-be must detect if end-user is active in on the page, for an online symbol that identify to other people that you are currently on the app and they can message you.
+    \item System-to-be must detect & update the status of the task every time a user makes an update on their workflow.
+    \item System-to-be must send push notification to the users notifying the deadlines, updates and messages.
+\end{itemize}
+\vspace{10}
+Interface Requirements:
+\begin{itemize}
+    \item The system-to-be has a downtime of 15 minutes every 24 hours for a backup to save any changes of the website from the users, and storing important information on the data base.
+    \item The system-to-be must store every workflow created in the data-base and update the ones that where changed.
+    \item The system-to-be must show the workflows that are already stored, so end-users can identify and select witch one they want to work on.
+    \item For security of the end-user account, the password should be initially obscured. They should have an option that enables the password to show for reviewing purposes.
+\end{itemize}
 \section{Synopsis}
 \section{Roles}
 \begin{center}
