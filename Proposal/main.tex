@@ -33,7 +33,14 @@ The project is to develop and research a Program Management Software. This proje
 \end{enumerate}
 
 \section{Assumptions and Dependencies}
-\vspace{100}
+\vspace{10}
+Rough sketch requirements as user stories:
+\begin{quotation}
+    As a user, having an organized and productive workflow is very critical and important, because it drastically improves the productivity of the user and the company. When its time to divide the work withing a team or assigning work to your employees having a Workflow management app really helps the process. If someone is stuck in a task, they can show it on the app, so a manager/Leader can send him a message and start helping them. The employee/manager and the team-member/Leader communication improves by having the online message system.
+\end{quotation}
+\begin{quotation}
+    As a user, having an easy-to-use and accessible Workflow Management app can be really helpful. I would like to be able to create and edit workflows as easy as possible, and to be remained about deadlines, messages and updates.
+\end{quotation}
 
 \section{Implicit/Derivative Goals}
 \vspace{10}
@@ -45,15 +52,7 @@ For the system to work properly and ensure a good experience with the users it m
   \item Response times from interface must be kept lower than 500 ms.
   \item Platform must be available at all times, with the exclusion of programmed downtimes.
 \end{enumerate}
-\vspace{10}
-Rough sketch requirements as user stories:
-\begin{quotation}
-As a user, having an organized and productive workflow is very critical and important, because it drastically improves the productivity of the user and the company. When its time to divide the work withing a team or assigning work to your employees having a Workflow management app really helps the process. If someone is stuck in a task, they can show it on the app, so a manager/Leader can send him a message and start helping them. The employee/manager and the team-member/Leader communication improves by having the online message system.
-\end{quotation}
-\begin{quotation}
-    As a user, having an easy-to-use and accessible Workflow Management app can be really helpful. I would like to be able to create and edit workflows as easy as possible, and to be remained about deadlines, messages and updates.
-\end{quotation}
-\vspace{10}
+\vspace{40}
 Domain Requirements:
 \begin{itemize}
     \item The data base must store end-user accounts, along with their password and personal information needed to create an account.
@@ -66,7 +65,7 @@ Domain Requirements:
     \item System-to-be must detect & update the status of the task every time a user makes an update on their workflow.
     \item System-to-be must send push notification to the users notifying the deadlines, updates and messages.
 \end{itemize}
-\vspace{10}
+\vspace{30}
 Interface Requirements:
 \begin{itemize}
     \item The system-to-be has a downtime of 15 minutes every 24 hours for a backup to save any changes of the website from the users, and storing important information on the data base.
@@ -74,6 +73,73 @@ Interface Requirements:
     \item The system-to-be must show the workflows that are already stored, so end-users can identify and select witch one they want to work on.
     \item For security of the end-user account, the password should be initially obscured. They should have an option that enables the password to show for reviewing purposes.
 \end{itemize}
+\vspace{80}
+Software Structure:
+
+\begin{itemize}
+    \item Security:
+
+\vspace{5}
+The Software will have the implementation of account registration, Users will provide an email and set up their accounts,
+setting their password as Username. Once the account has been created and the User has logged in, User must select the
+kind of work they will be focusing on and manage from available options. This includes:
+\begin{enumerate}
+    \item Sales
+    \item Creative
+    \item Marketing
+    \item IT
+    \item Finance
+    \item Customer Service
+    \item Software Development
+    \item ECT
+    \item Manufacturing
+\end{enumerate}
+Once
+User has chosen their work, a link will be generated to invite other users to join on the workflow, input information
+regarding the workflow.\\
+\end{itemize}
+
+\begin{itemize}
+    \item Data Management:
+
+    \vspace{5}
+    Users also can Customize their main UI Workstation and save their settings
+    Users can add widgets and tools to their
+    work station
+    The System tracks current events and their current status, from Ongoing to Complete.
+    The System tracks Current Users that are online and their current workflows.
+    System Monitors and sends notifications accordingly to constantly update the status of workflow.
+\end{itemize}
+
+\begin{itemize}
+    \item Report Generation
+
+    \vspace{5}
+    TheSystem will track and report on the different workflows.
+    This data is sent to the different users to their corresponding workflows.
+    Users can
+    update their workflows and report on their current state of their events.
+    Messages can be sent to other users.
+\end{itemize}
+
+\section{Terminology}
+\begin{center}
+
+    \begin{tabular}{| l | p{5cm} |}\hline
+    Term & Short definition \\ \hline
+    Event & This can be referred as a task or job that the User has access to. \\ \hline
+    User & Subject that enters and interacts with the system. \\ \hline
+    System & This specifically refers to the software itself. \\ \hline
+    UI & User Interface; Everything that the Users can see on display on the system. \\ \hline
+    Workstation & The Workstation is the main User Interface where one will manage, access and configure the Users Workflow. \\ \hline
+    Workflow & Page where all the social, working and management takes place. Each group provides workflows for each individual type ( sales
+    , T I, ...). \\ \hline
+    Social Integration & Provides social interaction between group members and users across the platform. Making the work environment very interactive
+    and easier to use. \\ \hline
+    Rank & A category assigned to the User. (i.e Manager, Student, Profesor, Employee). \\ \hline
+    \end{tabular}
+
+\end{center}
 \section{Synopsis}
 \section{Roles}
 \vspace{10}
