@@ -121,6 +121,115 @@ regarding the workflow.\\
     update their workflows and report on their current state of their events.
     Messages can be sent to other users.
 \end{itemize}
+Software Component Design:
+\bigbreak
+\noindent \textbf{module workflows:}
+\begin{quote}
+  \textbf{Variables:}
+  \begin{quote}
+    workflowName \textbf{String}; workflowDescription \textbf{String}; members \textbf{List}
+  \end{quote}
+  \textbf{Functions:}
+  \begin{quote}
+
+    status: boolean, status()
+    \begin{quote}
+      updates workflow current status, returns "ongoing" or "completed"
+    \end{quote}
+
+    currentlyOnline: List, currentlyOnline()
+    \begin{quote}
+      returns all users who are assigned to this task and are online.
+    \end{quote}
+
+    updateDescription: null, updateDescription(workflowDescriptions)
+    \begin{quote}
+     changes the workflow description.
+    \end{quote}
+  \end{quote}
+\end{quote}
+\textbf{end module}
+\bigbreak
+
+\noindent \textbf{module workflowManagement:}
+\begin{quote}
+  \textbf{Variables:}
+  \begin{quote}
+    username \textbf{String}; isManager \textbf{boolean}
+  \end{quote}
+
+  \textbf{Functions:}
+  \begin{quote}
+
+    createWorkflow: null, createWorkflow(isManager)
+    \begin{quote}
+      a new workflow is created, user must be a manager to do so.
+    \end{quote}
+
+    viewWorkflow: List, viewWorkflow(username, isManager)
+    \begin{quote}
+      views all workflows a certain user is currently on, must be a manager.
+    \end{quote}
+
+    onlineMembers: List, onlineMembers()
+    \begin{quote}
+      returns all members who are currently active.
+    \end{quote}
+
+  \end{quote}
+\end{quote}
+\textbf{end module}
+\bigbreak
+
+\noindent \textbf{module notifications:}
+\begin{quote}
+  \textbf{Variables:}
+  \begin{quote}
+    workflowName \textbf{String}; workflowMembers \textbf{List}
+  \end{quote}
+
+  \textbf{Functions:}
+  \begin{quote}
+
+    workflowUpdated: null, workFlowUpdated(workflowMembers, workflowName)
+    \begin{quote}
+      notifies all workflow memebers a change hasbeen made or status has changed.
+    \end{quote}
+
+    newWorkflow: null newWorkflow(workflowMembers)
+    \begin{quote}
+      notifies all members of the workflow that it has been created.
+    \end{quote}
+
+  \end{quote}
+\end{quote}
+\textbf{end module}
+\bigbreak
+
+\noindent \textbf{module accounts:}
+\begin{quote}
+
+  \textbf{Variables:}
+  \begin{quote}
+    email \textbf{String}; username \textbf{String}; department \textbf{String}; isManager \textbf{boolean}
+  \end{quote}
+  \textbf{Functions:}
+  \begin{quote}
+
+    changeDepartment: null, changeDepartment(department)
+    \begin{quote}
+      Switchs the user current department.
+    \end{quote}
+
+
+    managerStatus: boolean, managerStatus(isManager)
+    \begin{quote}
+      Assigns the user as a manager or as a regular user, returns manager status.
+    \end{quote}
+
+  \end{quote}
+\end{quote}
+\textbf{end module}
 
 \section{Terminology}
 \begin{center}
