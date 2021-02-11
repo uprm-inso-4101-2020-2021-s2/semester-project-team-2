@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{blindtext}
+\usepackage{graphicx}
 
 \title{Team 2 Proposal}
 \date{2021 \\ February}
@@ -121,6 +122,33 @@ regarding the workflow.\\
     update their workflows and report on their current state of their events.
     Messages can be sent to other users.
 \end{itemize}
+\vspace{5}
+Domain Entities:
+\begin{quotation}
+    The entities methods take care of the invariants and rules of the entity instead of having those rules spread across the application layer.
+    Every class has in own attributes and methods that will be called when the application is running but keeps it in an organized matter.
+\end{quotation}
+\bigbreak
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1.2\columnwidth]{Images/Domain_Entities.pdf}
+    \caption{Domain Entities}
+    \label{fig:figure}
+\end{figure}
+\bigbreak
+Domain Functions:
+\begin{quotation}
+    The domain functions takes care of the data when classes or variables get called when the user interacts with the platform.
+    We can see this in the diagram below where we can view the navigation of the data between entities.
+\end{quotation}
+\bigbreak
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{Images/state-view.pdf}
+    \caption{Domain Entities}
+    \label{fig:figure2}
+\end{figure}
+\bigbreak
 Software Component Design:
 \bigbreak
 \noindent \textbf{module workflows:}
