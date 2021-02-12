@@ -45,15 +45,7 @@ Rough sketch requirements as user stories:
 
 \section{Implicit/Derivative Goals}
 \vspace{10}
-For the system to work properly and ensure a good experience with the users it must comply with the following:
-\begin{enumerate}
-  \item Changes made will be updated at real time or with no more than a 200 ms delay for 99\% of the cases.
-  \item Users will be notified about changes relating to their tasks as soon as it is updated.
-  \item Even at peak times server load should be lower than 80\%
-  \item Response times from interface must be kept lower than 500 ms.
-  \item Platform must be available at all times, with the exclusion of programmed downtimes.
-\end{enumerate}
-\vspace{40}
+
 Domain Requirements:
 \begin{itemize}
     \item The data base must store end-user accounts, along with their password and personal information needed to create an account.
@@ -68,13 +60,23 @@ Domain Requirements:
 \end{itemize}
 \vspace{30}
 Interface Requirements:
+
 \begin{itemize}
     \item The system-to-be has a downtime of 15 minutes every 24 hours for a backup to save any changes of the website from the users, and storing important information on the data base.
     \item The system-to-be must store every workflow created in the data-base and update the ones that where changed.
     \item The system-to-be must show the workflows that are already stored, so end-users can identify and select witch one they want to work on.
     \item For security of the end-user account, the password should be initially obscured. They should have an option that enables the password to show for reviewing purposes.
 \end{itemize}
-\vspace{80}
+For the system to work properly and ensure a good experience with the users it must comply with the following:
+\begin{enumerate}
+  \item Changes made will be updated at real time or with no more than a 200 ms delay for 99\% of the cases.
+  \item Users will be notified about changes relating to their tasks as soon as it is updated.
+  \item Even at peak times server load should be lower than 80\%
+  \item Response times from interface must be kept lower than 500 ms.
+  \item Platform must be available at all times, with the exclusion of programmed downtimes.
+\end{enumerate}
+
+\vspace{70}
 Software Structure:
 
 \begin{itemize}
@@ -149,7 +151,7 @@ Domain Functions:
     \label{fig:figure2}
 \end{figure}
 \bigbreak
-Software Component Design:
+\noindent Software Component Design:
 \bigbreak
 \noindent \textbf{module workflows:}
 \begin{quote}
@@ -285,9 +287,9 @@ Software Component Design:
 \begin{tabular}{| l | p{5cm} |}\hline
 Name & Main Role \\ \hline
 Gabriel L. & \\ \hline
-Yadiel     & \\ \hline
+Yadiel     & Back-End\\ \hline
 Cristian   & \\ \hline
-Fernando   & \\ \hline
+Fernando   & Back-End \\ \hline
 Jesus	   & \\ \hline
 Jose Lazcano  & User Interface\\ \hline
 \end{tabular}
